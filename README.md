@@ -2,11 +2,16 @@
 
 musicflow is a GitHub Pages-ready website for a free DJ music discovery app concept. It presents the product, shows how playlist trend analysis can help DJs surface tracks, and includes a lightweight interactive demo for filtering tracks by genre and energy.
 
+## Mockup Preview
+
+![musicflow website mockup](assets/musicflow-mockup.png)
+
 ## Files
 
 - `index.html`: Landing page markup
 - `styles.css`: Visual design and responsive layout
 - `script.js`: Demo track data and filtering logic
+- `assets/musicflow-mockup.png`: Product mockup image used on the website and GitHub
 
 ## Run locally
 

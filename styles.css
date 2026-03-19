@@ -245,6 +245,21 @@ h1 {
   margin-top: 1.5rem;
 }
 
+.mockup-frame {
+  margin: 1.25rem 0 0;
+  padding: 0.8rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.36);
+  border: 1px solid rgba(23, 33, 33, 0.08);
+}
+
+.mockup-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
 .pulse-list article {
   display: grid;
   grid-template-columns: auto 1fr auto;
