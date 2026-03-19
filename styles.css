@@ -597,6 +597,18 @@ output {
   font-weight: 700;
 }
 
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.card-link-secondary {
+  background: rgba(19, 29, 41, 0.95);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
 .empty-state {
   display: grid;
   place-items: center;

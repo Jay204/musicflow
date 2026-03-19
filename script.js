@@ -6,7 +6,7 @@ const tracks = [
     energy: 87,
     playlists: 124,
     trend: 42,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Afro House Essentials"
   },
   {
     title: "Pressure Line",
@@ -15,7 +15,7 @@ const tracks = [
     energy: 78,
     playlists: 93,
     trend: 31,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Tech House Heat"
   },
   {
     title: "Velvet Sparks",
@@ -24,7 +24,7 @@ const tracks = [
     energy: 64,
     playlists: 71,
     trend: 18,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Nu Disco Night"
   },
   {
     title: "Static Bloom",
@@ -33,7 +33,7 @@ const tracks = [
     energy: 58,
     playlists: 66,
     trend: 12,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Melodic House Journey"
   },
   {
     title: "Burning Chrome",
@@ -42,7 +42,7 @@ const tracks = [
     energy: 92,
     playlists: 88,
     trend: 25,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Drum & Bass Boost"
   },
   {
     title: "Blue Frequency",
@@ -51,7 +51,7 @@ const tracks = [
     energy: 47,
     playlists: 54,
     trend: 6,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Organic House Flow"
   },
   {
     title: "Signal Hearts",
@@ -60,7 +60,7 @@ const tracks = [
     energy: 73,
     playlists: 81,
     trend: 22,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "House Party Selects"
   },
   {
     title: "Mirror Heat",
@@ -69,9 +69,13 @@ const tracks = [
     energy: 69,
     playlists: 49,
     trend: 4,
-    listenUrl: "https://open.spotify.com/"
+    playlistName: "Indie Dance Signal"
   }
 ];
+
+function spotifySearchUrl(query) {
+  return `https://open.spotify.com/search/${encodeURIComponent(query)}`;
+}
 
 const genreFilter = document.querySelector("#genreFilter");
 const energyFilter = document.querySelector("#energyFilter");
@@ -125,6 +129,8 @@ function renderTracks() {
 
   filteredTracks.forEach((track) => {
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
+    const trackQuery = `${track.title} ${track.artist}`;
+    const playlistQuery = `${track.playlistName || `${track.genre} playlist`}`;
     card.querySelector(".track-genre").textContent = track.genre;
     card.querySelector(".track-trend").textContent = `+${track.trend}%`;
     card.querySelector(".track-trend").classList.add("up");
@@ -132,7 +138,10 @@ function renderTracks() {
     card.querySelector(".track-artist").textContent = track.artist;
     card.querySelector(".track-energy").textContent = track.energy;
     card.querySelector(".track-playlists").textContent = track.playlists;
-    card.querySelector(".card-link").href = track.listenUrl;
+    card.querySelector(".card-link").href = spotifySearchUrl(trackQuery);
+    card.querySelector(".card-link").setAttribute("aria-label", `Search track ${track.title} by ${track.artist} on Spotify`);
+    card.querySelector(".card-link-secondary").href = spotifySearchUrl(playlistQuery);
+    card.querySelector(".card-link-secondary").setAttribute("aria-label", `Open related playlist ${playlistQuery} on Spotify`);
     fragment.append(card);
   });
 
