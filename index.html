@@ -24,22 +24,30 @@
           <div class="nav-links">
             <a href="#discovery">Discovery</a>
             <a href="#filters">Filters</a>
-            <a href="#launch">Launch</a>
+            <a href="#project">Project</a>
+            <a href="#roadmap">Roadmap</a>
           </div>
         </nav>
 
         <div class="hero-grid">
           <section class="hero-copy" id="top">
-            <p class="eyebrow">Free DJ music discovery app</p>
-            <h1>Find the tracks that are moving playlists before everyone else.</h1>
+            <p class="eyebrow">Open-source DJ music discovery project</p>
+            <h1>musicflow helps DJs find rising tracks with measurable momentum.</h1>
             <p class="hero-text">
-              musicflow scans fast-moving playlists, spots songs gaining traction, and lets DJs
-              filter by genre and energy to build stronger sets faster.
+              Built as a practical workflow project, musicflow scans fast-moving playlists,
+              scores track movement, and helps DJs filter by genre and energy before adding songs
+              into a set.
             </p>
             <div class="hero-actions" id="launch">
-              <a class="button button-primary" href="https://github.com/<your-username>/musicflow" target="_blank" rel="noreferrer">View the repo</a>
-              <a class="button button-secondary" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Open a track</a>
+              <a class="button button-primary" href="https://github.com/Jay204/musicflow" target="_blank" rel="noreferrer">GitHub Repository</a>
+              <a class="button button-secondary" href="https://jay204.github.io/musicflow/" target="_blank" rel="noreferrer">Live Project Site</a>
             </div>
+            <ul class="project-tags" aria-label="Project stack and status tags">
+              <li>Static site</li>
+              <li>Client-side demo</li>
+              <li>GitHub Pages deploy</li>
+              <li>Open-source roadmap</li>
+            </ul>
             <dl class="stats" aria-label="musicflow stats">
               <div>
                 <dt>12.4K</dt>
@@ -169,7 +177,104 @@
             </div>
           </div>
         </section>
+
+        <section class="project-board" id="project">
+          <article class="project-card">
+            <p class="feature-kicker">Project status</p>
+            <h2>Active build with public roadmap</h2>
+            <ul>
+              <li>Version: v0.2.0-beta</li>
+              <li>Deployment: GitHub Pages (main branch)</li>
+              <li>Last update: 19 Mar 2026</li>
+              <li>Owner: Jay204</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <p class="feature-kicker">Architecture</p>
+            <h2>Simple stack, fast iteration</h2>
+            <ol>
+              <li>Ingest playlist snapshots and trend deltas.</li>
+              <li>Score track momentum and energy buckets.</li>
+              <li>Expose discovery lists with genre + energy filters.</li>
+              <li>Link selected tracks directly to listening endpoints.</li>
+            </ol>
+          </article>
+
+          <article class="project-card">
+            <p class="feature-kicker">Current scope</p>
+            <h2>Working demo plus project documentation</h2>
+            <ul>
+              <li>Interactive shortlist filtering interface</li>
+              <li>Real project mockup and repo documentation</li>
+              <li>Public changelog and release direction</li>
+              <li>Contribution-ready repository structure</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="roadmap" id="roadmap">
+          <div class="section-heading">
+            <p class="eyebrow">Roadmap</p>
+            <h2>Planned milestones for production readiness.</h2>
+          </div>
+          <div class="milestone-grid">
+            <article>
+              <p class="milestone-state">Now</p>
+              <h3>Discovery beta</h3>
+              <p>Genre and energy filtering with trend-ranked shortlist cards.</p>
+            </article>
+            <article>
+              <p class="milestone-state">Next</p>
+              <h3>Playlist import</h3>
+              <p>Bring your own playlist IDs and render per-set trend deltas.</p>
+            </article>
+            <article>
+              <p class="milestone-state">Later</p>
+              <h3>Set planning tools</h3>
+              <p>Queue builder, crate export, and BPM transition suggestions.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="release-log" id="releases">
+          <div class="section-heading">
+            <p class="eyebrow">Release log</p>
+            <h2>Recent progress on the project.</h2>
+          </div>
+          <div class="log-table" role="table" aria-label="Release log">
+            <div class="log-row log-head" role="row">
+              <span role="columnheader">Version</span>
+              <span role="columnheader">Date</span>
+              <span role="columnheader">Notes</span>
+            </div>
+            <div class="log-row" role="row">
+              <span role="cell">v0.2.0-beta</span>
+              <span role="cell">2026-03-19</span>
+              <span role="cell">Integrated project mockup, updated docs, and published Pages build.</span>
+            </div>
+            <div class="log-row" role="row">
+              <span role="cell">v0.1.1</span>
+              <span role="cell">2026-03-19</span>
+              <span role="cell">Refined branding, repository structure, and deployment workflow.</span>
+            </div>
+            <div class="log-row" role="row">
+              <span role="cell">v0.1.0</span>
+              <span role="cell">2026-03-19</span>
+              <span role="cell">Initial launch with discovery interface and filtering demo.</span>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer class="site-footer">
+        <p>musicflow is an independent project for DJ track discovery workflows.</p>
+        <div>
+          <a href="https://github.com/Jay204/musicflow" target="_blank" rel="noreferrer">Repository</a>
+          <a href="https://jay204.github.io/musicflow/" target="_blank" rel="noreferrer">Live site</a>
+          <a href="https://github.com/Jay204/musicflow/issues" target="_blank" rel="noreferrer">Issues</a>
+        </div>
+      </footer>
     </div>
 
     <template id="trackCardTemplate">
