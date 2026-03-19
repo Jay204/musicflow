@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>musicflow OAuth callback</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: #070b10;
+        color: #e6edf5;
+        text-align: center;
+        padding: 2rem;
+      }
+      code {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>musicflow OAuth callback</h1>
+      <p>
+        This page exists so you can register a Redirect URI in the Spotify Developer Dashboard.
+      </p>
+      <p>
+        When Spotify redirects back, any query parameters (like <code>code</code> or
+        <code>state</code>) will appear below.
+      </p>
+      <pre id="params" style="text-align:left; white-space: pre-wrap;"></pre>
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const output = document.getElementById("params");
+      if (!params.toString()) {
+        output.textContent = "No query parameters were provided.";
+      } else {
+        output.textContent = [...params.entries()]
+          .map(([k, v]) => `${k}: ${v}`)
+          .join("\n");
+      }
+    </script>
+  </body>
+</html>
