@@ -1,15 +1,15 @@
 :root {
-  --bg: #efe6d5;
-  --bg-strong: #dcc9ac;
-  --surface: rgba(255, 251, 243, 0.82);
-  --surface-strong: #fff9ef;
-  --ink: #172121;
-  --muted: #4d5b5b;
-  --accent: #ef7d57;
-  --accent-2: #1f9d8b;
-  --accent-3: #f3c969;
-  --border: rgba(23, 33, 33, 0.14);
-  --shadow: 0 24px 60px rgba(23, 33, 33, 0.12);
+  --bg: #070b10;
+  --bg-strong: #0b121a;
+  --surface: rgba(17, 24, 34, 0.88);
+  --surface-strong: #121a24;
+  --ink: #e6edf5;
+  --muted: #93a2b2;
+  --accent: #2dd0c2;
+  --accent-2: #ff9466;
+  --accent-3: #6eb9ff;
+  --border: rgba(167, 186, 205, 0.2);
+  --shadow: 0 24px 64px rgba(2, 4, 8, 0.5);
 }
 
 * {
@@ -26,9 +26,10 @@ body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(239, 125, 87, 0.34), transparent 32%),
-    radial-gradient(circle at right 20%, rgba(31, 157, 139, 0.2), transparent 24%),
-    linear-gradient(135deg, #f7f0e3 0%, var(--bg) 44%, #e7dbc7 100%);
+    radial-gradient(circle at 14% 12%, rgba(255, 148, 102, 0.2), transparent 30%),
+    radial-gradient(circle at 86% 20%, rgba(45, 208, 194, 0.16), transparent 32%),
+    radial-gradient(circle at 60% 78%, rgba(110, 185, 255, 0.1), transparent 36%),
+    linear-gradient(145deg, #070b10 0%, var(--bg-strong) 54%, #05080c 100%);
 }
 
 body::before {
@@ -36,8 +37,8 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(23, 33, 33, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 33, 33, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(224, 236, 248, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(224, 236, 248, 0.025) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(circle at center, black, transparent 78%);
 }
@@ -66,7 +67,7 @@ body::before {
   padding: 1rem 1.25rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(255, 250, 242, 0.6);
+  background: rgba(12, 18, 26, 0.82);
 }
 
 .brand,
@@ -89,6 +90,11 @@ body::before {
   color: var(--muted);
 }
 
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--ink);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -107,7 +113,7 @@ body::before {
 }
 
 .hero-copy {
-  padding: 2rem 0.25rem 2rem 0;
+  padding: 1.6rem;
 }
 
 .hero-copy,
@@ -115,7 +121,7 @@ body::before {
 .milestone-grid article,
 .log-table,
 .site-footer {
-  background: rgba(255, 250, 242, 0.45);
+  background: rgba(14, 21, 30, 0.82);
 }
 
 .eyebrow,
@@ -143,22 +149,22 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
-  line-height: 0.95;
-  font-family: "Instrument Serif", serif;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 h1 {
-  max-width: 13ch;
+  max-width: 12ch;
   margin-top: 0.4rem;
-  font-size: clamp(2.25rem, 4.8vw, 4.2rem);
-  line-height: 1.04;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.08;
 }
 
 .hero-text {
   max-width: 36rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.65;
   margin: 1.25rem 0 0;
 }
 
@@ -182,7 +188,7 @@ h1 {
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(19, 29, 41, 0.86);
   color: var(--muted);
   font-size: 0.78rem;
   letter-spacing: 0.05em;
@@ -208,12 +214,15 @@ h1 {
 }
 
 .button-primary {
-  background: var(--ink);
-  color: #fff8ef;
+  background: var(--accent);
+  border-color: transparent;
+  color: #041417;
+  font-weight: 700;
 }
 
 .button-secondary {
-  background: rgba(255, 248, 239, 0.6);
+  background: rgba(19, 29, 41, 0.9);
+  color: var(--ink);
 }
 
 .stats {
@@ -244,9 +253,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem;
-  background:
-    linear-gradient(180deg, rgba(255, 249, 239, 0.82), rgba(220, 201, 172, 0.9)),
-    var(--surface-strong);
+  background: linear-gradient(180deg, rgba(20, 30, 43, 0.9), rgba(11, 16, 24, 0.96));
 }
 
 .panel-head,
@@ -265,7 +272,7 @@ h1 {
 .track-trend {
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
-  background: rgba(31, 157, 139, 0.12);
+  background: rgba(45, 208, 194, 0.16);
 }
 
 .pulse-list {
@@ -278,8 +285,8 @@ h1 {
   margin: 1.25rem 0 0;
   padding: 0.8rem;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.36);
-  border: 1px solid rgba(23, 33, 33, 0.08);
+  background: rgba(10, 15, 22, 0.72);
+  border: 1px solid rgba(167, 186, 205, 0.2);
 }
 
 .mockup-image {
@@ -296,7 +303,7 @@ h1 {
   align-items: center;
   padding: 1rem;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.44);
+  background: rgba(16, 25, 36, 0.86);
 }
 
 .pulse-rank {
@@ -305,7 +312,8 @@ h1 {
 }
 
 .pulse-list h2 {
-  font-size: 1.8rem;
+  font-size: 1.22rem;
+  letter-spacing: 0.01em;
 }
 
 .pulse-list p {
@@ -315,7 +323,7 @@ h1 {
 
 .trend.up,
 .track-trend.up {
-  color: #0a6a4c;
+  color: #3de2ce;
 }
 
 .feature-band,
@@ -338,8 +346,9 @@ h1 {
 
 .feature-band h2,
 .section-heading h2 {
-  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
   margin-top: 0.35rem;
+  line-height: 1.18;
 }
 
 .feature-band p:last-child,
@@ -379,8 +388,9 @@ label,
 }
 
 .project-card h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
   margin-top: 0.35rem;
+  line-height: 1.2;
 }
 
 .project-card ul,
@@ -410,7 +420,7 @@ label,
 
 .milestone-grid h3 {
   margin-top: 0.35rem;
-  font-size: 2rem;
+  font-size: 1.35rem;
 }
 
 .milestone-grid p {
@@ -434,7 +444,7 @@ label,
 
 .log-head {
   border-top: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(22, 33, 47, 0.95);
   color: var(--muted);
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -471,7 +481,7 @@ label,
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.45rem 0.75rem;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(19, 29, 41, 0.9);
 }
 
 .section-heading {
@@ -507,12 +517,16 @@ select {
   padding: 0.8rem 0.9rem;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(18, 27, 39, 0.95);
   color: var(--ink);
   font: inherit;
 }
 
 input[type="range"] {
+  accent-color: var(--accent);
+}
+
+input[type="checkbox"] {
   accent-color: var(--accent);
 }
 
@@ -539,7 +553,8 @@ output {
 }
 
 .track-title {
-  font-size: 2rem;
+  font-size: 1.32rem;
+  line-height: 1.2;
 }
 
 .track-artist {
@@ -576,8 +591,9 @@ output {
   width: fit-content;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: var(--ink);
-  color: #fff8ef;
+  background: var(--accent);
+  color: #031214;
+  font-weight: 700;
 }
 
 .empty-state {
@@ -589,7 +605,7 @@ output {
   border-radius: 28px;
   color: var(--muted);
   text-align: center;
-  background: rgba(255, 249, 239, 0.45);
+  background: rgba(17, 24, 34, 0.86);
 }
 
 .hero-copy,
@@ -680,7 +696,7 @@ output {
   }
 
   h1 {
-    font-size: clamp(3rem, 19vw, 4.4rem);
+    font-size: clamp(1.9rem, 10vw, 2.5rem);
   }
 
   .pulse-list article {
